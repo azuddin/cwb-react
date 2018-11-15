@@ -96,22 +96,31 @@ class App extends Component {
           ""
         ) : (
           <React.Fragment>
-            {/* <Table /> */}
-            {this.state.tabs[1].isActive ? <Product /> : ""}
-            {this.state.tabs[3].isActive ? <HelpSupport /> : ""}
-
-            {/* <div className="section">
-              <div className="hero">
-                <div className="hero-body">
-                  <div className="container">
-                    <h1 className="title">404</h1>
-                    <h2 className="subtitle">
-                      The page you are looking for is missing.
-                    </h2>
+            {this.state.tabs[0].isActive ? <Table /> : ""}
+            {this.state.tabs[1].isActive ? (
+              <div className="order">
+                <Product />
+              </div>
+            ) : (
+              ""
+            )}
+            {this.state.tabs[2].isActive ? (
+              <div className="section">
+                <div className="hero">
+                  <div className="hero-body">
+                    <div className="container">
+                      <h1 className="title">404</h1>
+                      <h2 className="subtitle">
+                        The page you are looking for is missing.
+                      </h2>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div> */}
+            ) : (
+              ""
+            )}
+            {this.state.tabs[3].isActive ? <HelpSupport /> : ""}
             <Footer />
           </React.Fragment>
         )}
