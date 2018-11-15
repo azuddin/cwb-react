@@ -64,7 +64,7 @@ class App extends Component {
         dropdownMenu: <Invite />
       },
       {
-        name: "Helps & Supports",
+        name: "Help & Support",
         isActive: false,
         dropdownMenu: ""
       }

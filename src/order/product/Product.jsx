@@ -18,7 +18,7 @@ class Product extends Component {
         </div>
         <div className="container">
           <div className="box">
-            <div className="tile is-ancestor">
+            <div className="tile is-mobile is-ancestor">
               <div className="tile is-parent">
                 <div className="tile is-child">
                   <div className="image is-4by3">

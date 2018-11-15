@@ -17,3 +17,9 @@ code {
   padding-top: 0 !important;
   min-height: 80vh;
 }
+
+@media screen and (min-width: 600px) {
+  .tile:not(.is-child) {
+    display: flex !important;
+  }
+}

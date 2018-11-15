@@ -4,20 +4,20 @@ import Menu from "../components/menu/Menu";
 class Order extends Component {
   state = {
     menu: [
-      {
-        name: "Credits Top Up",
-        isActive: false,
-        isOpen: false,
-        icon: "fa fa-plus-circle",
-        menuItem: []
-      },
-      {
-        name: "Products",
-        isActive: false,
-        isOpen: false,
-        icon: "fa fa-shopping-cart",
-        menuItem: []
-      }
+      // {
+      //   name: "Credits Top Up",
+      //   isActive: false,
+      //   isOpen: false,
+      //   icon: "fa fa-plus-circle",
+      //   menuItem: []
+      // },
+      // {
+      //   name: "Products",
+      //   isActive: false,
+      //   isOpen: false,
+      //   icon: "fa fa-shopping-cart",
+      //   menuItem: []
+      // }
     ]
   };
   handleIsActive = item => {
