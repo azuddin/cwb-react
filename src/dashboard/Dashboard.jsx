@@ -6,8 +6,8 @@ class Dashboard extends Component {
     menu: [
       {
         name: "Account",
-        isActive: true,
-        isOpen: true,
+        isActive: false,
+        isOpen: false,
         icon: "fa fa-user",
         menuItem: [
           {
@@ -24,7 +24,7 @@ class Dashboard extends Component {
           },
           {
             name: "Payment History",
-            isActive: true
+            isActive: false
           },
           {
             name: "S-Drive Usage History",
@@ -116,6 +116,13 @@ class Dashboard extends Component {
     });
     this.setState({ menu });
   };
+  handleIsActive = item => {
+    const menu = [...this.state.menu];
+    menu.map((i, key) => {
+      i.isActive = i === item.menu ? true : false;
+    });
+    this.setState({ menu });
+  };
   render() {
     return (
       <React.Fragment>
@@ -125,6 +132,7 @@ class Dashboard extends Component {
                 key={"menu-" + key}
                 menu={i}
                 handleDropdown={this.handleDropdown}
+                handleIsActive={this.handleIsActive}
               />
             ))
           : ""}

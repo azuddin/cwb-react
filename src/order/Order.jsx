@@ -20,12 +20,23 @@ class Order extends Component {
       }
     ]
   };
+  handleIsActive = item => {
+    const menu = [...this.state.menu];
+    menu.map((i, key) => {
+      i.isActive = i === item.menu ? true : false;
+    });
+    this.setState({ menu });
+  };
   render() {
     return (
       <React.Fragment>
         {this.state.menu.length > 0
           ? this.state.menu.map((i, key) => (
-              <Menu key={"menu-" + key} menu={i} />
+              <Menu
+                key={"menu-" + key}
+                menu={i}
+                handleIsActive={this.handleIsActive}
+              />
             ))
           : ""}
       </React.Fragment>

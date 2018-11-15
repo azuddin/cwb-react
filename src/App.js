@@ -5,14 +5,82 @@ import Table from "./components/Table";
 import HelpSupport from "./helpSupport/HelpSupport";
 import Product from "./order/product/Product";
 import Footer from "./components/Footer";
+import Dashboard from "./dashboard/Dashboard";
+import Order from "./order/Order";
+import Invite from "./invite/Invite";
 
 class App extends Component {
   state = {
-    burgerIsActive: false
+    burgerIsActive: false,
+    menuTab: <Dashboard />,
+    menu: [
+      {
+        name: "Language",
+        isActive: false,
+        isOpen: true,
+        icon: "fa fa-language",
+        menuItem: [
+          {
+            name: "English",
+            isActive: true
+          },
+          {
+            name: "Spanish",
+            isActive: false
+          }
+        ]
+      },
+      {
+        name: "Currency",
+        isActive: false,
+        isOpen: true,
+        icon: "fa fa-dollar-sign",
+        menuItem: [
+          {
+            name: "United States of America",
+            isActive: true
+          },
+          {
+            name: "Malaysia",
+            isActive: false
+          }
+        ]
+      }
+    ],
+    tabs: [
+      {
+        name: "Dashboard",
+        isActive: true,
+        dropdownMenu: <Dashboard />
+      },
+      {
+        name: "Order",
+        isActive: false,
+        dropdownMenu: <Order />
+      },
+      {
+        name: "Invite",
+        isActive: false,
+        dropdownMenu: <Invite />
+      },
+      {
+        name: "Helps & Supports",
+        isActive: false,
+        dropdownMenu: ""
+      }
+    ]
   };
   handleBurgerState = () => {
     const burgerIsActive = this.state.burgerIsActive ? false : true;
     this.setState({ burgerIsActive });
+  };
+  handleMenuTab = tab => {
+    const tabs = [...this.state.tabs];
+    const menuTab = tab.dropdownMenu;
+    tabs.map((i, key) => {
+      i.isActive = i === tab ? true : false;
+    });
+    this.setState({ tabs, menuTab });
   };
   render() {
     return (
@@ -20,15 +88,19 @@ class App extends Component {
         <Header
           burgerIsActive={this.state.burgerIsActive}
           handleBurgerState={this.handleBurgerState}
+          handleMenuTab={this.handleMenuTab}
+          menuTab={this.state.menuTab}
+          tabs={this.state.tabs}
         />
         {this.state.burgerIsActive ? (
           ""
         ) : (
           <React.Fragment>
-            <Table />
-            <HelpSupport />
-            <Product />
-            <div className="section">
+            {/* <Table /> */}
+            {this.state.tabs[1].isActive ? <Product /> : ""}
+            {this.state.tabs[3].isActive ? <HelpSupport /> : ""}
+
+            {/* <div className="section">
               <div className="hero">
                 <div className="hero-body">
                   <div className="container">
@@ -39,7 +111,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <Footer />
           </React.Fragment>
         )}

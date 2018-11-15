@@ -13,7 +13,7 @@ class Menu extends Component {
           onClick={() =>
             this.props.menu.menuItem.length > 0
               ? this.props.handleDropdown(this.props)
-              : null
+              : this.props.handleIsActive(this.props)
           }
         >
           <span className="panel-icon">

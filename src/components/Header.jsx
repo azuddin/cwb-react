@@ -1,57 +1,15 @@
 import React, { Component } from "react";
 import logo from "../cell-wellbeing-logo.png";
-import Dashboard from "../dashboard/Dashboard";
-import Order from "../order/Order";
-import Invite from "../invite/Invite";
 import Menu from "./menu/Menu";
 
 class Header extends Component {
   state = {
-    burgerIsActive: this.props.burgerIsActive,
-    menuTab: <Dashboard />,
-    menu: [
-      {
-        name: "Language",
-        isActive: false,
-        isOpen: true,
-        icon: "fa fa-language",
-        menuItem: [
-          {
-            name: "English",
-            isActive: true
-          },
-          {
-            name: "Spanish",
-            isActive: false
-          }
-        ]
-      },
-      {
-        name: "Currency",
-        isActive: false,
-        isOpen: true,
-        icon: "fa fa-dollar-sign",
-        menuItem: [
-          {
-            name: "United States of America",
-            isActive: true
-          },
-          {
-            name: "Malaysia",
-            isActive: false
-          }
-        ]
-      }
-    ]
+    burgerIsActive: this.props.burgerIsActive
   };
   handleBurgerState = () => {
     this.props.handleBurgerState();
     const burgerIsActive = this.state.burgerIsActive ? false : true;
     this.setState({ burgerIsActive });
-  };
-  handleMenuTab = tab => {
-    const menuTab = tab;
-    this.setState({ menuTab });
   };
   render() {
     return (
@@ -107,24 +65,19 @@ class Header extends Component {
               </p>
             </div>
             <p className="panel-tabs">
-              <a
-                className="is-active"
-                href="#null"
-                onClick={() => this.handleMenuTab(<Dashboard />)}
-              >
-                Dashboard
-              </a>
-              <a href="#null" onClick={() => this.handleMenuTab(<Order />)}>
-                Order
-              </a>
-              <a href="#null" onClick={() => this.handleMenuTab(<Invite />)}>
-                Invite
-              </a>
-              <a href="#null" onClick={() => this.handleMenuTab("")}>
-                Helps &amp; Supports
-              </a>
+              {this.props.tabs.map((i, key) => {
+                return (
+                  <a
+                    key={"tab-" + key}
+                    className={i.isActive ? "is-active" : ""}
+                    onClick={() => this.props.handleMenuTab(i)}
+                  >
+                    {i.name}
+                  </a>
+                );
+              })}
             </p>
-            {this.state.menuTab}
+            {this.props.menuTab}
           </nav>
         )}
       </React.Fragment>
