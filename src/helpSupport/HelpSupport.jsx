@@ -5,11 +5,11 @@ class HelpSupport extends Component {
   render() {
     return (
       <div className="section">
-        <div class="hero">
-          <div class="hero-body">
-            <div class="container">
-              <h1 class="title">Hi. How can we help?</h1>
-              <h2 class="subtitle">
+        <div className="hero">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title">Hi. How can we help?</h1>
+              <h2 className="subtitle">
                 We have an extensive knowledge base that you can search along
                 with downloadable resources and videos to help you learn. If all
                 of this does not answer your questions then please don't
@@ -19,41 +19,41 @@ class HelpSupport extends Component {
           </div>
         </div>
         <div className="container">
-          <div class="tile is-ancestor">
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">One</p>
-                <p class="subtitle">Subtitle</p>
+          <div className="tile is-ancestor">
+            <div className="tile is-parent">
+              <article className="tile is-child box">
+                <p className="title">One</p>
+                <p className="subtitle">Subtitle</p>
               </article>
             </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">Two</p>
-                <p class="subtitle">Subtitle</p>
+            <div className="tile is-parent">
+              <article className="tile is-child box">
+                <p className="title">Two</p>
+                <p className="subtitle">Subtitle</p>
               </article>
             </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">Three</p>
-                <p class="subtitle">Subtitle</p>
+            <div className="tile is-parent">
+              <article className="tile is-child box">
+                <p className="title">Three</p>
+                <p className="subtitle">Subtitle</p>
               </article>
             </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">Four</p>
-                <p class="subtitle">Subtitle</p>
+            <div className="tile is-parent">
+              <article className="tile is-child box">
+                <p className="title">Four</p>
+                <p className="subtitle">Subtitle</p>
               </article>
             </div>
           </div>
 
-          <div class="tile is-ancestor">
-            <div class="tile is-vertical is-9">
-              <div class="tile">
-                <div class="tile is-parent">
-                  <article class="tile is-child box">
-                    <p class="title">Five</p>
-                    <p class="subtitle">Subtitle</p>
-                    <div class="content">
+          <div className="tile is-ancestor">
+            <div className="tile is-vertical is-9">
+              <div className="tile">
+                <div className="tile is-parent">
+                  <article className="tile is-child box">
+                    <p className="title">Five</p>
+                    <p className="subtitle">Subtitle</p>
+                    <div className="content">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Etiam semper diam at erat pulvinar, at pulvinar felis
@@ -65,35 +65,35 @@ class HelpSupport extends Component {
                     </div>
                   </article>
                 </div>
-                <div class="tile is-8 is-vertical">
-                  <div class="tile">
-                    <div class="tile is-parent">
-                      <article class="tile is-child box">
-                        <p class="title">Six</p>
-                        <p class="subtitle">Subtitle</p>
+                <div className="tile is-8 is-vertical">
+                  <div className="tile">
+                    <div className="tile is-parent">
+                      <article className="tile is-child box">
+                        <p className="title">Six</p>
+                        <p className="subtitle">Subtitle</p>
                       </article>
                     </div>
-                    <div class="tile is-parent">
-                      <article class="tile is-child box">
-                        <p class="title">Seven</p>
-                        <p class="subtitle">Subtitle</p>
+                    <div className="tile is-parent">
+                      <article className="tile is-child box">
+                        <p className="title">Seven</p>
+                        <p className="subtitle">Subtitle</p>
                       </article>
                     </div>
                   </div>
-                  <div class="tile is-parent">
-                    <article class="tile is-child box">
-                      <p class="title">Eight</p>
-                      <p class="subtitle">Subtitle</p>
+                  <div className="tile is-parent">
+                    <article className="tile is-child box">
+                      <p className="title">Eight</p>
+                      <p className="subtitle">Subtitle</p>
                     </article>
                   </div>
                 </div>
               </div>
-              <div class="tile">
-                <div class="tile is-8 is-parent">
-                  <article class="tile is-child box">
-                    <p class="title">Nine</p>
-                    <p class="subtitle">Subtitle</p>
-                    <div class="content">
+              <div className="tile">
+                <div className="tile is-8 is-parent">
+                  <article className="tile is-child box">
+                    <p className="title">Nine</p>
+                    <p className="subtitle">Subtitle</p>
+                    <div className="content">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Proin ornare magna eros, eu pellentesque tortor
@@ -103,11 +103,11 @@ class HelpSupport extends Component {
                     </div>
                   </article>
                 </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child box">
-                    <p class="title">Ten</p>
-                    <p class="subtitle">Subtitle</p>
-                    <div class="content">
+                <div className="tile is-parent">
+                  <article className="tile is-child box">
+                    <p className="title">Ten</p>
+                    <p className="subtitle">Subtitle</p>
+                    <div className="content">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Proin ornare magna eros, eu pellentesque tortor
@@ -119,12 +119,12 @@ class HelpSupport extends Component {
                 </div>
               </div>
             </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <div class="content">
-                  <p class="title">Eleven</p>
-                  <p class="subtitle">Subtitle</p>
-                  <div class="content">
+            <div className="tile is-parent">
+              <article className="tile is-child box">
+                <div className="content">
+                  <p className="title">Eleven</p>
+                  <p className="subtitle">Subtitle</p>
+                  <div className="content">
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam semper diam at erat pulvinar, at pulvinar felis
@@ -147,12 +147,12 @@ class HelpSupport extends Component {
             </div>
           </div>
 
-          <div class="tile is-ancestor">
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">Twelve</p>
-                <p class="subtitle">Subtitle</p>
-                <div class="content">
+          <div className="tile is-ancestor">
+            <div className="tile is-parent">
+              <article className="tile is-child box">
+                <p className="title">Twelve</p>
+                <p className="subtitle">Subtitle</p>
+                <div className="content">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Proin ornare magna eros, eu pellentesque tortor vestibulum
@@ -161,11 +161,11 @@ class HelpSupport extends Component {
                 </div>
               </article>
             </div>
-            <div class="tile is-parent is-6">
-              <article class="tile is-child box">
-                <p class="title">Thirteen</p>
-                <p class="subtitle">Subtitle</p>
-                <div class="content">
+            <div className="tile is-parent is-6">
+              <article className="tile is-child box">
+                <p className="title">Thirteen</p>
+                <p className="subtitle">Subtitle</p>
+                <div className="content">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Proin ornare magna eros, eu pellentesque tortor vestibulum
@@ -175,11 +175,11 @@ class HelpSupport extends Component {
                 </div>
               </article>
             </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">Fourteen</p>
-                <p class="subtitle">Subtitle</p>
-                <div class="content">
+            <div className="tile is-parent">
+              <article className="tile is-child box">
+                <p className="title">Fourteen</p>
+                <p className="subtitle">Subtitle</p>
+                <div className="content">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Proin ornare magna eros, eu pellentesque tortor vestibulum

@@ -113,7 +113,9 @@ class Dashboard extends Component {
     return (
       <React.Fragment>
         {this.state.menu.length > 0
-          ? this.state.menu.map(i => <Menu menu={i} />)
+          ? this.state.menu.map((i, key) => (
+              <Menu key={"menu-" + key} menu={i} />
+            ))
           : ""}
       </React.Fragment>
     );

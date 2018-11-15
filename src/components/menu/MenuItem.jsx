@@ -9,7 +9,7 @@ class MenuItem extends Component {
   };
   render() {
     return (
-      <a className={this.state.isActive}>
+      <a className={this.state.isActive} href="/">
         <span className="panel-icon">
           <i className="fas fa-angle-double-right" aria-hidden="true" />
         </span>

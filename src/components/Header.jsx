@@ -3,7 +3,6 @@ import logo from "../cell-wellbeing-logo.png";
 import Dashboard from "../dashboard/Dashboard";
 import Order from "../order/Order";
 import Invite from "../invite/Invite";
-import HelpSupport from "../helpSupport/HelpSupport";
 import Menu from "./menu/Menu";
 
 class Header extends Component {
@@ -49,7 +48,7 @@ class Header extends Component {
       <React.Fragment>
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
-            <a className="navbar-item" href="https://bulma.io">
+            <a className="navbar-item" href="#null">
               <img
                 src={logo}
                 alt="Bulma: a modern CSS framework based on Flexbox"
@@ -66,6 +65,7 @@ class Header extends Component {
               }
               aria-label="menu"
               aria-expanded="false"
+              href="#null"
             >
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -76,10 +76,10 @@ class Header extends Component {
         {this.state.burgerIsActive ? (
           <nav className="panel">
             {this.state.menu.length > 0
-              ? this.state.menu.map(i => <Menu menu={i} />)
+              ? this.state.menu.map((i, key) => (
+                  <Menu key={"burger-" + key} menu={i} />
+                ))
               : ""}
-            {/* <Order /> */}
-            {/* <Invite /> */}
           </nav>
         ) : (
           <nav className="panel">
@@ -96,14 +96,16 @@ class Header extends Component {
               </p>
             </div>
             <p className="panel-tabs">
-              <a className="is-active">Dashboard</a>
-              <a>Order</a>
-              <a>Invite</a>
-              <a>Helps &amp; Supports</a>
+              <a className="is-active" href="#null">
+                Dashboard
+              </a>
+              <a href="#null">Order</a>
+              <a href="#null">Invite</a>
+              <a href="#null">Helps &amp; Supports</a>
             </p>
-            {/* <Dashboard /> */}
-            {/* <Order /> */}
-            {/* <Invite /> */}
+            <Dashboard />
+            <Order />
+            <Invite />
           </nav>
         )}
       </React.Fragment>

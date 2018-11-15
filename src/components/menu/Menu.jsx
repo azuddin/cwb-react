@@ -13,6 +13,7 @@ class Menu extends Component {
     return (
       <React.Fragment>
         <a
+          href="#null"
           className={
             this.state.isActive ? "panel-block is-active" : "panel-block "
           }
@@ -35,8 +36,12 @@ class Menu extends Component {
           )}
         </a>
         {this.state.isOpen && this.state.menuItem.length > 0
-          ? this.state.menuItem.map(i => (
-              <MenuItem name={i.name} isActive={i.isActive} />
+          ? this.state.menuItem.map((i, key) => (
+              <MenuItem
+                key={"menu-item-" + key}
+                name={i.name}
+                isActive={i.isActive}
+              />
             ))
           : ""}
       </React.Fragment>

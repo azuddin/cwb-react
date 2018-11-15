@@ -7,7 +7,7 @@ class Table extends Component {
       <div className="section" style={{ minHeight: "auto" }}>
         <div className="container">
           <div className="panel" style={{ overflowX: "auto" }}>
-            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
               <thead>
                 <tr>
                   <th>Date</th>
@@ -26,9 +26,9 @@ class Table extends Component {
                   <td>USD 100.00</td>
                   <td>paid</td>
                   <td>
-                    <a className="button is-light">
-                      <span class="icon">
-                        <i class="fa fa-file-export" />
+                    <a className="button is-light" href="#null">
+                      <span className="icon">
+                        <i className="fa fa-file-export" />
                       </span>
                     </a>
                   </td>
@@ -40,9 +40,9 @@ class Table extends Component {
                   <td>USD 100.00</td>
                   <td>paid</td>
                   <td>
-                    <a className="button is-light">
-                      <span class="icon">
-                        <i class="fa fa-file-export" />
+                    <a className="button is-light" href="#null">
+                      <span className="icon">
+                        <i className="fa fa-file-export" />
                       </span>
                     </a>
                   </td>
@@ -54,9 +54,9 @@ class Table extends Component {
                   <td>USD 100.00</td>
                   <td>paid</td>
                   <td>
-                    <a className="button is-light">
-                      <span class="icon">
-                        <i class="fa fa-file-export" />
+                    <a className="button is-light" href="#null">
+                      <span className="icon">
+                        <i className="fa fa-file-export" />
                       </span>
                     </a>
                   </td>
@@ -68,9 +68,9 @@ class Table extends Component {
                   <td>USD 100.00</td>
                   <td>paid</td>
                   <td>
-                    <a className="button is-light">
-                      <span class="icon">
-                        <i class="fa fa-file-export" />
+                    <a className="button is-light" href="#null">
+                      <span className="icon">
+                        <i className="fa fa-file-export" />
                       </span>
                     </a>
                   </td>
@@ -82,9 +82,9 @@ class Table extends Component {
                   <td>USD 100.00</td>
                   <td>paid</td>
                   <td>
-                    <a className="button is-light">
-                      <span class="icon">
-                        <i class="fa fa-file-export" />
+                    <a className="button is-light" href="#null">
+                      <span className="icon">
+                        <i className="fa fa-file-export" />
                       </span>
                     </a>
                   </td>
@@ -93,37 +93,54 @@ class Table extends Component {
             </table>
           </div>
           <nav
-            class="pagination is-centered"
+            className="pagination is-centered"
             role="navigation"
             aria-label="pagination"
           >
-            <ul class="pagination-list">
+            <ul className="pagination-list">
               <li>
-                <a class="pagination-link" aria-label="Goto page 45">
+                <a
+                  className="pagination-link"
+                  aria-label="Goto page 45"
+                  href="#null"
+                >
                   1
                 </a>
               </li>
               <li>
-                <a class="pagination-link" aria-label="Goto page 45">
+                <a
+                  className="pagination-link"
+                  aria-label="Goto page 45"
+                  href="#null"
+                >
                   <i className="fa fa-caret-left" />
                 </a>
               </li>
               <li>
                 <a
-                  class="pagination-link is-current"
+                  className="pagination-link is-current"
                   aria-label="Page 46"
                   aria-current="page"
+                  href="#null"
                 >
                   3
                 </a>
               </li>
               <li>
-                <a class="pagination-link" aria-label="Goto page 47">
+                <a
+                  className="pagination-link"
+                  aria-label="Goto page 47"
+                  href="#null"
+                >
                   <i className="fa fa-caret-right" />
                 </a>
               </li>
               <li>
-                <a class="pagination-link" aria-label="Goto page 45">
+                <a
+                  className="pagination-link"
+                  aria-label="Goto page 45"
+                  href="#null"
+                >
                   45
                 </a>
               </li>
