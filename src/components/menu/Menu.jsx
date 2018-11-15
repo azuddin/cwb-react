@@ -2,31 +2,31 @@ import React, { Component } from "react";
 import MenuItem from "./MenuItem";
 
 class Menu extends Component {
-  state = {
-    name: this.props.menu.name,
-    menuItem: this.props.menu.menuItem,
-    isActive: this.props.menu.isActive,
-    isOpen: this.props.menu.isOpen,
-    icon: this.props.menu.icon
-  };
   render() {
     return (
       <React.Fragment>
         <a
           href="#null"
           className={
-            this.state.isActive ? "panel-block is-active" : "panel-block "
+            this.props.menu.isActive ? "panel-block is-active" : "panel-block "
+          }
+          onClick={() =>
+            this.props.menu.menuItem.length > 0
+              ? this.props.handleDropdown(this.props)
+              : null
           }
         >
           <span className="panel-icon">
-            <i className={this.state.icon} aria-hidden="true" />
+            <i className={this.props.menu.icon} aria-hidden="true" />
           </span>
-          {this.state.name}&nbsp;
-          {this.state.menuItem.length > 0 ? (
+          {this.props.menu.name}&nbsp;
+          {this.props.menu.menuItem.length > 0 ? (
             <span className="icon is-small">
               <i
                 className={
-                  this.state.isOpen ? "fa fa-caret-down" : "fa fa-caret-right"
+                  this.props.menu.isOpen
+                    ? "fa fa-caret-down"
+                    : "fa fa-caret-right"
                 }
                 aria-hidden="true"
               />
@@ -35,8 +35,8 @@ class Menu extends Component {
             ""
           )}
         </a>
-        {this.state.isOpen && this.state.menuItem.length > 0
-          ? this.state.menuItem.map((i, key) => (
+        {this.props.menu.isOpen && this.props.menu.menuItem.length > 0
+          ? this.props.menu.menuItem.map((i, key) => (
               <MenuItem
                 key={"menu-item-" + key}
                 name={i.name}

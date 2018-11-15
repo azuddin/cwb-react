@@ -7,7 +7,7 @@ class Dashboard extends Component {
       {
         name: "Account",
         isActive: true,
-        isOpen: false,
+        isOpen: true,
         icon: "fa fa-user",
         menuItem: [
           {
@@ -63,7 +63,7 @@ class Dashboard extends Component {
       {
         name: "Agent",
         isActive: false,
-        isOpen: true,
+        isOpen: false,
         icon: "fa fa-code-branch",
         menuItem: [
           {
@@ -109,12 +109,23 @@ class Dashboard extends Component {
       }
     ]
   };
+  handleDropdown = item => {
+    const menu = [...this.state.menu];
+    menu.map((i, key) => {
+      i.isOpen = i === item.menu ? (i.isOpen ? false : true) : false;
+    });
+    this.setState({ menu });
+  };
   render() {
     return (
       <React.Fragment>
         {this.state.menu.length > 0
           ? this.state.menu.map((i, key) => (
-              <Menu key={"menu-" + key} menu={i} />
+              <Menu
+                key={"menu-" + key}
+                menu={i}
+                handleDropdown={this.handleDropdown}
+              />
             ))
           : ""}
       </React.Fragment>
