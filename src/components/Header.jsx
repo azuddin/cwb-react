@@ -43,6 +43,11 @@ class Header extends Component {
       }
     ]
   };
+  handleBurgerState = () => {
+    this.props.handleBurgerState();
+    const burgerIsActive = this.state.burgerIsActive ? false : true;
+    this.setState({ burgerIsActive });
+  };
   render() {
     return (
       <React.Fragment>
@@ -66,6 +71,7 @@ class Header extends Component {
               aria-label="menu"
               aria-expanded="false"
               href="#null"
+              onClick={this.handleBurgerState}
             >
               <span aria-hidden="true" />
               <span aria-hidden="true" />
