@@ -12,7 +12,8 @@ class Footer extends Component {
             .&nbsp;&nbsp;&nbsp;
             <a href="#null">Home</a>&nbsp;&nbsp;&nbsp;
             <a href="#null">Help and Support</a>
-            &nbsp;&nbsp;&nbsp;<a href="#null">Terms and Conditions</a>{" "}
+            &nbsp;&nbsp;&nbsp;<a href="#null">Terms and Conditions</a>
+            &nbsp;&nbsp;&nbsp;
             <a href="#null">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
             <a href="#null">Disclaimer</a>
           </p>
