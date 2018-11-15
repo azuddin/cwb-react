@@ -8,6 +8,7 @@ import Menu from "./menu/Menu";
 class Header extends Component {
   state = {
     burgerIsActive: this.props.burgerIsActive,
+    menuTab: <Dashboard />,
     menu: [
       {
         name: "Language",
@@ -47,6 +48,10 @@ class Header extends Component {
     this.props.handleBurgerState();
     const burgerIsActive = this.state.burgerIsActive ? false : true;
     this.setState({ burgerIsActive });
+  };
+  handleMenuTab = tab => {
+    const menuTab = tab;
+    this.setState({ menuTab });
   };
   render() {
     return (
@@ -102,16 +107,24 @@ class Header extends Component {
               </p>
             </div>
             <p className="panel-tabs">
-              <a className="is-active" href="#null">
+              <a
+                className="is-active"
+                href="#null"
+                onClick={() => this.handleMenuTab(<Dashboard />)}
+              >
                 Dashboard
               </a>
-              <a href="#null">Order</a>
-              <a href="#null">Invite</a>
-              <a href="#null">Helps &amp; Supports</a>
+              <a href="#null" onClick={() => this.handleMenuTab(<Order />)}>
+                Order
+              </a>
+              <a href="#null" onClick={() => this.handleMenuTab(<Invite />)}>
+                Invite
+              </a>
+              <a href="#null" onClick={() => this.handleMenuTab("")}>
+                Helps &amp; Supports
+              </a>
             </p>
-            <Dashboard />
-            <Order />
-            <Invite />
+            {this.state.menuTab}
           </nav>
         )}
       </React.Fragment>
