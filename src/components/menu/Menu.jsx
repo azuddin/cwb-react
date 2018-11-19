@@ -1,6 +1,18 @@
 import React, { Component } from "react";
 import MenuItem from "./MenuItem";
 
+const CaretDown = () => (
+  <span className="icon is-small">
+    <i className="fa fa-caret-down" />
+  </span>
+);
+
+const CaretRight = () => (
+  <span className="icon is-small">
+    <i className="fa fa-caret-right" />
+  </span>
+);
+
 class Menu extends Component {
   render() {
     return (
@@ -21,16 +33,11 @@ class Menu extends Component {
           </span>
           {this.props.menu.name}&nbsp;
           {this.props.menu.menuItem.length > 0 ? (
-            <span className="icon is-small">
-              <i
-                className={
-                  this.props.menu.isOpen
-                    ? "fa fa-caret-down"
-                    : "fa fa-caret-right"
-                }
-                aria-hidden="true"
-              />
-            </span>
+            this.props.menu.isOpen ? (
+              <CaretDown />
+            ) : (
+              <CaretRight />
+            )
           ) : (
             ""
           )}
